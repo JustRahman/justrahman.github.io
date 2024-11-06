@@ -71,8 +71,37 @@ document.addEventListener("DOMContentLoaded", function () {
             skill.style.transform = 'translateY(0)';
         }, 500); // Delay to stagger the animations
     });
-});
 
-document.querySelector('.education-box').addEventListener('click', function() {
-    alert('You clicked on the education box!');
+    // Scroll-triggered fade-out for hero content
+    document.addEventListener("scroll", function() {
+        const scrollPosition = window.scrollY;
+        const heroContent = document.querySelector(".hero-content");
+        const topLeft = document.querySelector(".top-left");
+
+        // Define the scroll range over which the fade-out occurs
+        const fadeStart = 100; // Point at which fade-out starts
+        const fadeEnd = 400; // Point at which fade-out is complete
+        const fadeRange = fadeEnd - fadeStart;
+
+        // Calculate the opacity based on scroll position within the fade range
+        if (scrollPosition > fadeStart && scrollPosition < fadeEnd) {
+            const opacity = 1 - (scrollPosition - fadeStart) / fadeRange;
+            heroContent.style.opacity = opacity;
+            topLeft.style.opacity = opacity;
+            heroContent.style.transform = `translateY(${-20 * (1 - opacity)}px)`;
+            topLeft.style.transform = `translateY(${-20 * (1 - opacity)}px)`;
+        } else if (scrollPosition >= fadeEnd) {
+            // If scroll is past the fadeEnd point, set opacity to 0 (completely hidden)
+            heroContent.style.opacity = 0;
+            topLeft.style.opacity = 0;
+            heroContent.style.transform = `translateY(-20px)`;
+            topLeft.style.transform = `translateY(-20px)`;
+        } else {
+            // If scroll is before the fadeStart point, reset to full opacity
+            heroContent.style.opacity = 1;
+            topLeft.style.opacity = 1;
+            heroContent.style.transform = `translateY(0)`;
+            topLeft.style.transform = `translateY(0)`;
+        }
+    });
 });

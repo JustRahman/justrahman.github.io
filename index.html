@@ -10,19 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero fade-in">
         <div class="hero-background"></div>
-        <div class="hero-overlay"></div> <!-- Dark overlay for better contrast -->
-        <div class="top-left">
-            <img src="images/logo.png" alt="Rahman Bazarov Logo" class="logo">
-            <h2 class="name">Rahman Bazarov</h2>
-        </div>
-        <div class="hero-content fade-in">
-            <h1>Python Developer & Tech Enthusiast</h1>
-            <p>Transforming ideas into digital solutions with hands-on experience.</p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-out-on-scroll">
+            <div class="top-left">
+                <img src="images/logo1.png" alt="Rahman Bazarov Logo" class="logo">
+                <h2 class="name">Rahman Bazarov</h2>
+            </div>
+            <h1 class="title">Python Developer & Tech Enthusiast</h1>
+            <p class="subtitle">Transforming ideas into digital solutions with hands-on experience.</p>
             <a href="#work" class="cta-button">View My Work</a>
         </div>
     </header>
+    
+    
+    
 
     <section id="about" class="about fade-in">
         <h2>About Me</h2>
@@ -69,30 +72,59 @@
     </section>
     
 
-    <section class="experience fade-in">
+    <section id="experience" class="experience fade-in">
         <h2>Experience</h2>
-        <div class="experience-entry">
-            <h3 class="job-title">C# Intern</h3>
-            <p class="company"><strong>Alem Tory</strong> - Ashgabat, Turkmenistan | <span class="date">May 2022 - Jan 2023</span></p>
-            <ul class="responsibilities">
-                <li>Developed user interfaces using WPF and XAML technologies to streamline processes.</li>
-                <li>Created web services and APIs in C# to facilitate communication across systems.</li>
-                <li>Used SQL to create and optimize queries, enhancing data retrieval efficiency.</li>
-                <li>Collaborated with senior developers to implement new features and improve workflow.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="education">
-        <h2>Education</h2>
-        <div class="education-card">
-            <div class="education-content">
-                <h3>Arizona State University</h3>
-                <p>Computer Science</p>
-                <p>2024 - 2028</p>
+        <div class="experience-content">
+            <div class="job slide-in-left">
+                <div class="job-header">
+                    <h3>Junior Python Developer</h3>
+                    <span class="date">2024 - Present</span>
+                </div>
+                <p class="company">Tech Solutions Inc.</p>
+                <p class="description">
+                    Developed and optimized backend applications with Python and Flask, collaborating closely with the frontend team to ensure seamless integration and functionality.
+                </p>
+                <ul class="responsibilities">
+                    <li>Optimized code to improve performance by 30%.</li>
+                    <li>Collaborated with team members to implement RESTful APIs.</li>
+                    <li>Provided ongoing support and debugging.</li>
+                </ul>
+            </div>
+            <div class="job slide-in-right">
+                <div class="job-header">
+                    <h3>Intern Web Developer</h3>
+                    <span class="date">2023 - 2024</span>
+                </div>
+                <p class="company">Web Innovators</p>
+                <p class="description">
+                    Assisted in building responsive websites using HTML, CSS, and JavaScript, and contributed to UX/UI improvements for better user experience.
+                </p>
+                <ul class="responsibilities">
+                    <li>Enhanced website performance by optimizing images and scripts.</li>
+                    <li>Worked with designers to implement UX/UI changes.</li>
+                    <li>Participated in weekly sprint planning and reviews.</li>
+                </ul>
             </div>
         </div>
     </section>
+    
+
+    <section id="education" class="education fade-in">
+        <h2>Education</h2>
+        <div class="education-content">
+            <div class="school slide-in-left">
+                <h3>Arizona State University</h3>
+                <p>Bachelor of Science in Computer Science</p>
+                <span class="date">2023 - Present</span>
+            </div>
+            <div class="school slide-in-right">
+                <h3>Turkmen-Russian Secondary School</h3>
+                <p>High School Diploma</p>
+                <span class="date">2016 - 2023</span>
+            </div>
+        </div>
+    </section>
+    
     
     
 
