@@ -32,11 +32,16 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     z-index: -1;
+    background-image: url('../images/background.jpeg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Adjust this value for transparency */
 }
 
 .top-left {
     position: absolute;
-    top: -20px; /* Moved further up */
+    top: -40px; /* Moved further up */
     left: -20px; /* Positioned further left */
     display: flex;
     align-items: center;
@@ -44,7 +49,7 @@ body {
 
 .logo {
     width: 70px;
-    margin-right: 15px;
+    margin-right: 1px;
 }
 
 .name {
@@ -170,10 +175,15 @@ body {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Fade-in Animation for About Section */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes fadeIn {
@@ -250,22 +260,7 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
 }
 
-/* Fade-in Effect for Skill Section */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -490,28 +485,7 @@ body {
     color: #ffcc00; /* Turn yellow on hover */
 }
 
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-@keyframes fadeInUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 @keyframes slideInLeft {
     from {
@@ -566,6 +540,25 @@ body {
     gap: 30px;
     align-items: center;
 }
+
+.education-image-asu {
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+    max-width: 140px; /* Adjust the size as needed */
+    height: auto;
+}
+
+.education-image-trs {
+    position: absolute;
+    right: 25px;
+    top: 55%;
+    transform: translateY(-50%);
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
 
 .school {
     background: rgba(255, 255, 255, 0.1);
@@ -622,6 +615,7 @@ body {
 .contact form {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center; /* Center-align all form fields */
     gap: 20px; /* Consistent spacing between fields */
 }
@@ -700,24 +694,51 @@ body {
     color: #d4a60a; /* Darker yellow on hover */
 }
 
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+.contact-out-of-order {
+    position: relative;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.8); /* Red background for warning */
+    color: #fff;
+    font-size: 1.2em;
+    transform: rotate(-17deg);
+    border-radius: 5px;
+    animation: blink 1s infinite alternate;
+    top: -370px;
+    left: 7%;
+    width: 80%;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1, .hero-content h2, .about h2, .skills h2, .projects h2, .experience h2, .education h2, .contact h2 {
         font-size: 2em;
+    }
+}
+/* Initial style for "Coming Soon..." */
+#blog-posts h2 {
+    font-size: 2rem;
+    color: #ffcc00;
+    opacity: 0.8;
+    transition: color 0.3s;
+}
+
+/* Glowing effect */
+.glow {
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffaa00, 0 0 20px #ffaa00;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffaa00, 0 0 30px #ffaa00, 0 0 40px #ff8800, 0 0 50px #ff8800;
     }
 }

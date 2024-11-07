@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahman Bazarov - Python Developer Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("TMp5kfS69_ovIoywX");
+    })();
+    </script>
+    <script src="../js/scripts.js"></script>
 </head>
 <body>
     <header class="hero fade-in">
@@ -15,12 +24,13 @@
         <div class="hero-overlay"></div>
         <div class="hero-content fade-out-on-scroll">
             <div class="top-left">
-                <img src="images/logo1.png" alt="Rahman Bazarov Logo" class="logo">
+                <img src="../images/logo1.png" alt="Rahman Bazarov Logo" class="logo">
                 <h2 class="name">Rahman Bazarov</h2>
             </div>
             <h1 class="title">Python Developer & Tech Enthusiast</h1>
             <p class="subtitle">Transforming ideas into digital solutions with hands-on experience.</p>
-            <a href="#work" class="cta-button">View My Work</a>
+            <a href="#projects" class="cta-button">View My Work</a>
+            <a href="blog.html" class="cta-button">Visit My Blog</a>
         </div>
     </header>
     
@@ -33,13 +43,13 @@
             I am a Computer Science student with a solid foundation in Python and full-stack development. With hands-on experience in both front-end and back-end development, I’m passionate about creating efficient, responsive, and scalable applications.
         </p>
         <p>
-            Skilled in HTML, CSS, JavaScript, and C# for front-end work, as well as SQL, RESTful API design, and Flask for back-end functionality. I am particularly interested in machine learning, with a growing proficiency in frameworks like Scikit-learn.
+            Skilled in HTML, CSS, JavaScript, and C# for front-end work, as well as SQL, RESTful API design, and Flask for back-end functionality. I am particularly interested in machine learning, with a growing proficiency in frameworks like Scikit-learn,TensorFlow.
         </p>
-        <img src="images/Bazarov Rahman.jpg" alt="Rahman Bazarov" class="profile-photo">
+        <img src="../images/Bazarov Rahman.jpg" alt="Rahman Bazarov" class="profile-photo">
     </section>
     
 
-    <section id="skills" class="skills">
+    <section id="skills" class="skills fade-in">
         <h2>Skills</h2>
         <div class="skill-set">
             <div class="skill fade-in">Python</div>
@@ -51,20 +61,21 @@
             <div class="skill fade-in">Machine Learning</div>
             <div class="skill fade-in">Git</div>
             <div class="skill fade-in">Flask</div>
+            <div class="skill fade-in">AWS</div>
         </div>
     </section>
     
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects fade-in">
         <h2>Projects</h2>
         <div class="project-grid">
             <div class="project-card scale-hover">
-                <img src="images/project1.jpeg" alt="BeletFilm Project">
+                <img src="../images/belet.jpeg" alt="BeletFilm Project">
                 <h3>BeletFilm</h3>
                 <p>Developed a C# (WPF) platform for streaming national movies and TV shows, creating a seamless user experience.</p>
             </div>
             <div class="project-card scale-hover">
-                <img src="images/project2.jpeg" alt="FMS Improvement Game">
+                <img src="../images/FMS.jpg" alt="FMS Improvement Game">
                 <h3>FMS Improvement Game</h3>
                 <p>Designed an interactive game to help toddlers develop fine motor skills through fun, engaging activities.</p>
             </div>
@@ -75,34 +86,37 @@
     <section id="experience" class="experience fade-in">
         <h2>Experience</h2>
         <div class="experience-content">
-            <div class="job slide-in-left">
-                <div class="job-header">
-                    <h3>Junior Python Developer</h3>
-                    <span class="date">2024 - Present</span>
-                </div>
-                <p class="company">Tech Solutions Inc.</p>
-                <p class="description">
-                    Developed and optimized backend applications with Python and Flask, collaborating closely with the frontend team to ensure seamless integration and functionality.
-                </p>
-                <ul class="responsibilities">
-                    <li>Optimized code to improve performance by 30%.</li>
-                    <li>Collaborated with team members to implement RESTful APIs.</li>
-                    <li>Provided ongoing support and debugging.</li>
-                </ul>
-            </div>
             <div class="job slide-in-right">
                 <div class="job-header">
-                    <h3>Intern Web Developer</h3>
+                    <h3>Developer</h3>
                     <span class="date">2023 - 2024</span>
                 </div>
-                <p class="company">Web Innovators</p>
+                <p class="company">Mili Ulgam Economic Society</p>
                 <p class="description">
-                    Assisted in building responsive websites using HTML, CSS, and JavaScript, and contributed to UX/UI improvements for better user experience.
+                    Worked on database management, Python programming, and API development, contributing to the successful completion of various projects and demonstrating exceptional problem-solving skills.
                 </p>
                 <ul class="responsibilities">
-                    <li>Enhanced website performance by optimizing images and scripts.</li>
-                    <li>Worked with designers to implement UX/UI changes.</li>
-                    <li>Participated in weekly sprint planning and reviews.</li>
+                    <li>Showcased proficiency in databases, Python, and API integration to develop robust software solutions.</li>
+                    <li>Quickly grasped complex concepts and applied them effectively to solve programming challenges.</li>
+                    <li>Maintained a proactive approach to tasks, ensuring detailed and high-quality outcomes.</li>
+                    <li>Excelled in communication and teamwork, contributing to discussions and presenting project updates clearly.</li>
+                </ul>
+            </div>
+            
+            <div class="job slide-in-right">
+                <div class="job-header">
+                    <h3>C# Developer</h3>
+                    <span class="date">2022 - 2023</span>
+                </div>
+                <p class="company">Alem Tory</p>
+                <p class="description">
+                    Contributed to the development of innovative software solutions as a volunteer developer, showcasing expertise in programming languages and tools like C# and Flutter.
+                </p>
+                <ul class="responsibilities">
+                    <li>Adapted quickly to the technology stack, ensuring seamless integration into ongoing projects.</li>
+                    <li>Displayed strong problem-solving skills and attention to detail, contributing to successful project outcomes.</li>
+                    <li>Demonstrated teamwork and leadership qualities, actively participating in discussions and offering valuable insights.</li>
+                    <li>Committed to continuous learning and taking on new challenges to enhance coding techniques and technical knowledge.</li>
                 </ul>
             </div>
         </div>
@@ -116,25 +130,28 @@
                 <h3>Arizona State University</h3>
                 <p>Bachelor of Science in Computer Science</p>
                 <span class="date">2023 - Present</span>
+                <img src="../images/asu1.png" alt="Arizona State University Logo" class="education-image-asu">
             </div>
             <div class="school slide-in-right">
                 <h3>Turkmen-Russian Secondary School</h3>
                 <p>High School Diploma</p>
                 <span class="date">2016 - 2023</span>
+                <img src="../images/trs1.png" alt="Turkmen-Russian School Logo" class="education-image-trs">
             </div>
         </div>
     </section>
     
     
     
+    
 
     <section class="contact fade-in">
         <h2>Contact Me</h2>
-        <form action="send-email.php" method="post">
-            <input type="text" name="name" placeholder="Enter Your Name" required>
-            <input type="email" name="email" placeholder="Enter Your Email" required>
-            <textarea name="message" placeholder="Type Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form id="contact-form">
+            <input  type="text" name="name" id="name" placeholder="Enter Your Name" required disabled>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required disabled>
+            <textarea name="message" id="message" placeholder="Type Your Message" required disabled></textarea>
+            <button type="submit"  disabled >Send Message</button>
         </form>
         <div class="contact-info">
             <p>Email: <a href="mailto:rahmanbazarov4567@gmail.com">rahmanbazarov4567@gmail.com</a></p>
@@ -142,12 +159,12 @@
             <p>Address: Tempe, United States</p>
         </div>
         <div class="social-media">
-            <a href="https://github.com/yourprofile">GitHub</a>
-            <a href="https://twitter.com/yourprofile">Twitter</a>
-            <!-- Add more links as needed -->
+            <a href="https://github.com/JustRahman">GitHub</a>
+            <a href="https://www.instagram.com/bazarov_rahman">Instagram</a>
         </div>
     </section>
+    
 
-    <script src="js/scripts.js"></script>
+    
 </body>
 </html>
