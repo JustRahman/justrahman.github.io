@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RahmanOS v1.0</title>
+    <link rel="stylesheet" href="css/os.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="icon" data-window="about">
+                <div class="icon-image">📄</div>
+                <div class="icon-label">about.txt</div>
+            </div>
+            <div class="icon" data-window="skills">
+                <div class="icon-image">⚙️</div>
+                <div class="icon-label">skills.exe</div>
+            </div>
+            <div class="icon" data-window="projects">
+                <div class="icon-image">📁</div>
+                <div class="icon-label">projects/</div>
+            </div>
+            <div class="icon" data-window="contact">
+                <div class="icon-image">📧</div>
+                <div class="icon-label">contact.txt</div>
+            </div>
+            <div class="icon" data-window="terminal">
+                <div class="icon-image">💻</div>
+                <div class="icon-label">terminal.exe</div>
+            </div>
+        </div>
+
+        <!-- Windows -->
+        <div class="window" id="about-window" style="display: none;">
+            <div class="window-header">
+                <div class="window-title">📄 about.txt</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h1>Rahman Bazarov</h1>
+                <h2>Computer Science Student & Developer</h2>
+                <p>Arizona State University</p>
+                <br>
+                <p>Computer Science student with experience in full-stack development and a growing interest in machine learning.</p>
+                <p>I specialize in Python, JavaScript, and C#, with hands-on experience building web applications and APIs.</p>
+            </div>
+        </div>
+
+        <div class="window" id="skills-window" style="display: none;">
+            <div class="window-header">
+                <div class="window-title">⚙️ skills.exe</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Technical Skills</h2>
+                <div class="skill-section">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>C#</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>Next.js</span>
+                        <span>FastAPI</span>
+                        <span>Flask</span>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>PostgreSQL</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+                <div class="skill-section">
+                    <h3>Interests</h3>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>Web Development</span>
+                        <span>SaaS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="projects-window" style="display: none;">
+            <div class="window-header">
+                <div class="window-title">📁 projects/</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Featured Projects</h2>
+                <div class="project">
+                    <h3>LexFlow</h3>
+                    <p>Micro-SaaS platform streamlining client intake and e-signing for solo attorneys and small law firms</p>
+                    <div class="project-tech">Next.js • FastAPI • PostgreSQL • Stripe • Docker</div>
+                    <a href="https://github.com/JustRahman/LexFlow" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project">
+                    <h3>OrderEasy</h3>
+                    <p>Platform supporting elderly and disabled individuals with online shopping for essentials</p>
+                    <div class="project-tech">Full-Stack Development</div>
+                    <a href="https://github.com/JustRahman/OrderEase" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project">
+                    <h3>BeletFilm</h3>
+                    <p>C# (WPF) streaming platform for national movies and TV shows</p>
+                    <div class="project-tech">C# • WPF</div>
+                    <a href="https://github.com/JustRahman/BeletFilm" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project">
+                    <h3>FMS Improvement Game</h3>
+                    <p>Interactive game helping toddlers develop fine motor skills</p>
+                    <div class="project-tech">Game Development</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="contact-window" style="display: none;">
+            <div class="window-header">
+                <div class="window-title">📧 contact.txt</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>Get in Touch</h2>
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:rahmanbazarov4567@gmail.com">rahmanbazarov4567@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong>
+                    <a href="tel:+14804657171">+1 (480) 465-7171</a>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/JustRahman" target="_blank">@JustRahman</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/bazarov_rahman" target="_blank">@bazarov_rahman</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong>
+                    <span>Tempe, Arizona</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="window terminal-window" id="terminal-window" style="display: none;">
+            <div class="window-header">
+                <div class="window-title">💻 terminal.exe</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content terminal-content">
+                <div id="terminal-mini-output">
+                    <div>RahmanOS Terminal v1.0</div>
+                    <div>Type 'help' for commands</div>
+                    <div>---</div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">$</span>
+                    <input type="text" id="terminal-mini-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="taskbar-start">
+                <button class="start-button">◉ RahmanOS</button>
+            </div>
+            <div class="taskbar-windows" id="taskbar-windows"></div>
+            <div class="taskbar-end">
+                <div class="taskbar-time" id="taskbar-time"></div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div class="start-menu" id="start-menu" style="display: none;">
+            <div class="start-menu-header">
+                <h3>Rahman Bazarov</h3>
+                <p>Computer Science Student</p>
+            </div>
+            <div class="start-menu-items">
+                <button class="start-menu-item" data-window="about">📄 About Me</button>
+                <button class="start-menu-item" data-window="skills">⚙️ Skills</button>
+                <button class="start-menu-item" data-window="projects">📁 Projects</button>
+                <button class="start-menu-item" data-window="contact">📧 Contact</button>
+                <button class="start-menu-item" data-window="terminal">💻 Terminal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/os.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM ACCESS // RAHMAN_BAZAROV</title>
+    <link rel="stylesheet" href="css/breach.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Boot Sequence -->
+    <div id="boot-screen" class="screen active">
+        <div class="scan-lines"></div>
+        <div class="boot-content">
+            <div class="glitch" data-text="SYSTEM BREACH">SYSTEM BREACH</div>
+            <div class="boot-log">
+                <div class="log-line">// INITIALIZING NEURAL LINK...</div>
+                <div class="log-line">// BYPASSING FIREWALL...</div>
+                <div class="log-line">// DECRYPTING DATA STREAMS...</div>
+                <div class="log-line">// ACCESSING TARGET: RAHMAN_BAZAROV</div>
+                <div class="log-line warning">// WARNING: INTRUSION DETECTED</div>
+                <div class="log-line success">// ACCESS GRANTED</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Interface -->
+    <div id="main-screen" class="screen">
+        <div class="scan-lines"></div>
+        <div class="grid-bg"></div>
+
+        <!-- HUD Header -->
+        <div class="hud-header">
+            <div class="hud-left">
+                <span class="status-indicator"></span>
+                <span class="hud-text">CONNECTED</span>
+            </div>
+            <div class="hud-center glitch" data-text="RAHMAN_BAZAROV">RAHMAN_BAZAROV</div>
+            <div class="hud-right">
+                <span class="hud-text" id="system-time">00:00:00</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navigation Hexagons -->
+            <div class="hex-nav">
+                <div class="hex-item" data-target="profile">
+                    <div class="hex-shape">
+                        <div class="hex-content">
+                            <div class="hex-icon">◉</div>
+                            <div class="hex-label">PROFILE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hex-item" data-target="skills">
+                    <div class="hex-shape">
+                        <div class="hex-content">
+                            <div class="hex-icon">◈</div>
+                            <div class="hex-label">SKILLS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hex-item" data-target="projects">
+                    <div class="hex-shape">
+                        <div class="hex-content">
+                            <div class="hex-icon">◆</div>
+                            <div class="hex-label">PROJECTS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hex-item" data-target="contact">
+                    <div class="hex-shape">
+                        <div class="hex-content">
+                            <div class="hex-icon">◇</div>
+                            <div class="hex-label">CONTACT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Panels -->
+            <div class="data-container">
+                <!-- Profile Panel -->
+                <div class="data-panel active" id="profile-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">// PROFILE_DATA</span>
+                        <span class="panel-id">#001</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="data-stream">
+                            <div class="data-line">NAME: <span class="highlight">Rahman Bazarov</span></div>
+                            <div class="data-line">STATUS: <span class="highlight-cyan">Computer Science Student</span></div>
+                            <div class="data-line">LOCATION: <span class="highlight-magenta">Arizona State University</span></div>
+                            <div class="data-line">CLEARANCE: <span class="highlight-green">FULL-STACK DEVELOPER</span></div>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="bio-text">
+                            <p>Computer Science student at Arizona State University with experience in full-stack development and a growing interest in machine learning.</p>
+                            <p>Specializing in Python, JavaScript, and C#, with hands-on experience building web applications and APIs.</p>
+                        </div>
+                        <div class="data-visualization">
+                            <div class="data-bar">
+                                <div class="bar-label">EXPERIENCE</div>
+                                <div class="bar-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="data-bar">
+                                <div class="bar-label">SKILL_LEVEL</div>
+                                <div class="bar-fill" style="width: 85%"></div>
+                            </div>
+                            <div class="data-bar">
+                                <div class="bar-label">CREATIVITY</div>
+                                <div class="bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Panel -->
+                <div class="data-panel" id="skills-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">// SKILL_MATRIX</span>
+                        <span class="panel-id">#002</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="skill-grid">
+                            <div class="skill-category">
+                                <div class="category-title">LANGUAGES</div>
+                                <div class="skill-items">
+                                    <span class="skill-chip">Python</span>
+                                    <span class="skill-chip">JavaScript</span>
+                                    <span class="skill-chip">C#</span>
+                                    <span class="skill-chip">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="category-title">FRAMEWORKS</div>
+                                <div class="skill-items">
+                                    <span class="skill-chip">Next.js</span>
+                                    <span class="skill-chip">FastAPI</span>
+                                    <span class="skill-chip">Flask</span>
+                                    <span class="skill-chip">React</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="category-title">TOOLS</div>
+                                <div class="skill-items">
+                                    <span class="skill-chip">Git</span>
+                                    <span class="skill-chip">Docker</span>
+                                    <span class="skill-chip">PostgreSQL</span>
+                                    <span class="skill-chip">AWS</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <div class="category-title">INTERESTS</div>
+                                <div class="skill-items">
+                                    <span class="skill-chip">Machine Learning</span>
+                                    <span class="skill-chip">Web Development</span>
+                                    <span class="skill-chip">SaaS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Panel -->
+                <div class="data-panel" id="projects-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">// PROJECT_FILES</span>
+                        <span class="panel-id">#003</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="project-list">
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <span class="project-name">LexFlow</span>
+                                    <span class="project-status">ACTIVE</span>
+                                </div>
+                                <div class="project-desc">Micro-SaaS platform streamlining client intake and e-signing for solo attorneys and small law firms</div>
+                                <div class="project-tech">Next.js • FastAPI • PostgreSQL • Stripe • Docker</div>
+                                <a href="https://github.com/JustRahman/LexFlow" target="_blank" class="project-link">ACCESS_FILE →</a>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <span class="project-name">OrderEasy</span>
+                                    <span class="project-status">ACTIVE</span>
+                                </div>
+                                <div class="project-desc">Platform supporting elderly and disabled individuals with online shopping for essentials</div>
+                                <div class="project-tech">Full-Stack Development</div>
+                                <a href="https://github.com/JustRahman/OrderEase" target="_blank" class="project-link">ACCESS_FILE →</a>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <span class="project-name">BeletFilm</span>
+                                    <span class="project-status">COMPLETE</span>
+                                </div>
+                                <div class="project-desc">C# (WPF) streaming platform for national movies and TV shows</div>
+                                <div class="project-tech">C# • WPF</div>
+                                <a href="https://github.com/JustRahman/BeletFilm" target="_blank" class="project-link">ACCESS_FILE →</a>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-header">
+                                    <span class="project-name">FMS Improvement Game</span>
+                                    <span class="project-status">COMPLETE</span>
+                                </div>
+                                <div class="project-desc">Interactive game helping toddlers develop fine motor skills</div>
+                                <div class="project-tech">Game Development</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Panel -->
+                <div class="data-panel" id="contact-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">// CONTACT_CHANNELS</span>
+                        <span class="panel-id">#004</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-label">EMAIL</div>
+                                <a href="mailto:rahmanbazarov4567@gmail.com" class="contact-value">rahmanbazarov4567@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-label">PHONE</div>
+                                <a href="tel:+14804657171" class="contact-value">+1 (480) 465-7171</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">💻</div>
+                                <div class="contact-label">GITHUB</div>
+                                <a href="https://github.com/JustRahman" target="_blank" class="contact-value">@JustRahman</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📸</div>
+                                <div class="contact-label">INSTAGRAM</div>
+                                <a href="https://www.instagram.com/bazarov_rahman" target="_blank" class="contact-value">@bazarov_rahman</a>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="location-data">
+                            <div class="data-line">LOCATION: <span class="highlight">Tempe, Arizona</span></div>
+                            <div class="data-line">TIMEZONE: <span class="highlight-cyan">MST (UTC-7)</span></div>
+                            <div class="data-line">AVAILABILITY: <span class="highlight-green">OPEN TO OPPORTUNITIES</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Stream Overlay -->
+        <div class="data-stream-overlay">
+            <div class="stream-line"></div>
+            <div class="stream-line"></div>
+            <div class="stream-line"></div>
+        </div>
+    </div>
+
+    <script src="js/breach.js"></script>
+</body>
+</html>

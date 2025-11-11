@@ -1,0 +1,654 @@
+/* Retro Arcade Portfolio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --cyan: #00ffff;
+    --yellow: #ffff00;
+    --magenta: #ff00ff;
+    --green: #00ff00;
+    --red: #ff0000;
+    --white: #ffffff;
+    --cabinet: #1a1a2e;
+    --panel: #16213e;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Arcade Cabinet */
+.arcade-cabinet {
+    width: 100%;
+    max-width: 800px;
+    background: var(--cabinet);
+    border-radius: 20px 20px 0 0;
+    box-shadow:
+        0 0 40px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Cabinet Top */
+.cabinet-top {
+    background: linear-gradient(180deg, var(--panel) 0%, var(--cabinet) 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--cyan);
+    box-shadow: 0 4px 0 var(--magenta);
+}
+
+.cabinet-logo {
+    text-shadow:
+        2px 2px 0 var(--magenta),
+        4px 4px 0 var(--cyan);
+}
+
+.logo-text {
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 5px;
+}
+
+.logo-arcade {
+    font-size: 1.5rem;
+    color: var(--cyan);
+    letter-spacing: 5px;
+}
+
+/* Screen Bezel */
+.screen-bezel {
+    padding: 30px;
+    background: var(--cabinet);
+}
+
+.screen {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: var(--black);
+    border: 8px solid #333;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        inset 0 0 50px rgba(0, 255, 255, 0.2),
+        0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+/* CRT Effects */
+.crt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+    z-index: 100;
+}
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 99;
+    animation: scanline-move 8s linear infinite;
+}
+
+@keyframes scanline-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+/* Game Screens */
+.game-screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: var(--cyan);
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-y: auto;
+}
+
+.game-screen.active {
+    display: block;
+    animation: screen-flicker 0.3s;
+}
+
+@keyframes screen-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Insert Coin Screen */
+#insert-coin-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coin-prompt {
+    font-size: 24px;
+    color: var(--yellow);
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--yellow);
+}
+
+.credit-display {
+    font-size: 16px;
+    color: var(--cyan);
+    margin-bottom: 20px;
+}
+
+.press-space {
+    font-size: 10px;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.high-scores-preview {
+    margin-top: 20px;
+}
+
+.score-title {
+    color: var(--magenta);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.score-line {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49%, 100% { opacity: 1; }
+    50%, 99% { opacity: 0; }
+}
+
+/* Main Menu */
+.menu-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title-line {
+    color: var(--cyan);
+    margin: 5px 0;
+}
+
+.title-main {
+    font-size: 18px;
+    color: var(--yellow);
+    margin: 10px 0;
+    text-shadow: 2px 2px 0 var(--magenta);
+}
+
+.menu-items {
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.menu-item .arrow {
+    opacity: 0;
+    margin-right: 10px;
+}
+
+.menu-item.active {
+    background-color: rgba(0, 255, 255, 0.2);
+    color: var(--yellow);
+    border-left: 4px solid var(--yellow);
+}
+
+.menu-item.active .arrow {
+    opacity: 1;
+    color: var(--yellow);
+    animation: arrow-bounce 0.5s infinite;
+}
+
+@keyframes arrow-bounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+.menu-controls {
+    text-align: center;
+    color: var(--magenta);
+    font-size: 10px;
+    line-height: 2;
+}
+
+/* Screen Header */
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--yellow);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cyan);
+}
+
+/* Pixel Border */
+.pixel-border {
+    border: 3px solid var(--cyan);
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+.info-line {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.bio-text {
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+/* Skills */
+.skill-group {
+    margin-bottom: 25px;
+}
+
+.group-header {
+    color: var(--yellow);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--magenta);
+    padding-bottom: 5px;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.skill-name {
+    color: var(--cyan);
+    min-width: 120px;
+}
+
+.skill-boxes {
+    color: var(--green);
+    margin: 0 10px;
+}
+
+.skill-pct {
+    color: var(--yellow);
+}
+
+.skill-item {
+    color: var(--white);
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+/* Mission Log */
+.mission-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.mission-box {
+    border: 2px solid var(--cyan);
+    margin-bottom: 20px;
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+.mission-header {
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 10px;
+    color: var(--yellow);
+    text-align: center;
+    border-bottom: 2px solid var(--cyan);
+}
+
+.mission-content {
+    padding: 15px;
+}
+
+.mission-content > div {
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.mission-desc {
+    color: var(--cyan);
+    margin: 15px 0;
+    line-height: 2;
+}
+
+.mission-tech {
+    color: var(--magenta);
+    font-size: 10px;
+}
+
+.mission-link {
+    color: var(--green);
+    font-size: 9px;
+}
+
+/* Contact */
+.comm-title {
+    text-align: center;
+    color: var(--yellow);
+    margin-bottom: 20px;
+}
+
+.comm-item {
+    color: var(--cyan);
+    margin-bottom: 5px;
+}
+
+.comm-icon {
+    margin-right: 10px;
+}
+
+.comm-value {
+    color: var(--green);
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.status-msg {
+    text-align: center;
+    color: var(--yellow);
+    margin: 10px 0;
+}
+
+/* High Scores */
+.scores-table {
+    margin: 30px 0;
+}
+
+.score-header {
+    color: var(--yellow);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cyan);
+    padding-bottom: 10px;
+}
+
+.score-entry {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    margin-bottom: 12px;
+    padding: 8px;
+}
+
+.score-entry.gold {
+    color: var(--yellow);
+    background-color: rgba(255, 255, 0, 0.1);
+}
+
+.score-entry.silver {
+    color: var(--cyan);
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.score-entry.bronze {
+    color: var(--magenta);
+    background-color: rgba(255, 0, 255, 0.1);
+}
+
+.achievement-text {
+    text-align: center;
+    color: var(--yellow);
+    margin-top: 30px;
+    font-size: 14px;
+    animation: blink 2s infinite;
+}
+
+/* Back Prompt */
+.back-prompt {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--magenta);
+    font-size: 10px;
+    animation: blink 1.5s infinite;
+}
+
+/* Control Panel */
+.control-panel {
+    background: linear-gradient(180deg, var(--cabinet) 0%, var(--panel) 100%);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 4px solid var(--cyan);
+}
+
+/* Joystick */
+.joystick {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.joystick-base {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #444 0%, #222 100%);
+    border-radius: 50%;
+    border: 4px solid #555;
+    box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.joystick-stick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #ff0000 0%, #aa0000 100%);
+    border-radius: 50%;
+    border: 3px solid #ff4444;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Arcade Buttons */
+.arcade-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.arcade-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 4px solid;
+    cursor: pointer;
+    transition: all 0.1s;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.arcade-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.arcade-button.red {
+    background: radial-gradient(circle, #ff0000 0%, #aa0000 100%);
+    border-color: #ff4444;
+    color: var(--white);
+}
+
+.arcade-button.blue {
+    background: radial-gradient(circle, #0000ff 0%, #0000aa 100%);
+    border-color: #4444ff;
+    color: var(--white);
+}
+
+/* Coin Slot */
+.coin-slot {
+    text-align: center;
+}
+
+.coin-label {
+    font-size: 10px;
+    color: var(--yellow);
+    margin-bottom: 10px;
+}
+
+.slot {
+    width: 100px;
+    height: 20px;
+    background-color: #000;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.action-button.yellow {
+    background: radial-gradient(circle, #ffff00 0%, #aaaa00 100%);
+    border-color: #ffff44;
+    color: var(--black);
+}
+
+.action-button.green {
+    background: radial-gradient(circle, #00ff00 0%, #00aa00 100%);
+    border-color: #44ff44;
+    color: var(--black);
+}
+
+/* Info Panel */
+.info-panel {
+    background-color: var(--black);
+    border-top: 4px solid var(--yellow);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-around;
+    color: var(--cyan);
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-label {
+    font-size: 10px;
+    color: var(--magenta);
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: var(--yellow);
+    text-shadow: 0 0 10px var(--yellow);
+}
+
+/* Scrollbar */
+.game-screen::-webkit-scrollbar,
+.mission-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.game-screen::-webkit-scrollbar-track,
+.mission-list::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+.game-screen::-webkit-scrollbar-thumb,
+.mission-list::-webkit-scrollbar-thumb {
+    background: var(--cyan);
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .logo-arcade {
+        font-size: 1rem;
+    }
+
+    .game-screen {
+        font-size: 10px;
+        padding: 15px;
+    }
+
+    .control-panel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-panel {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

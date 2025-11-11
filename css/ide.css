@@ -1,0 +1,455 @@
+/* VS Code IDE Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #1e1e1e;
+    --bg-darker: #252526;
+    --bg-lighter: #2d2d30;
+    --bg-input: #3c3c3c;
+    --border: #3e3e42;
+    --text: #cccccc;
+    --text-dim: #858585;
+    --blue: #569cd6;
+    --green: #6a9955;
+    --yellow: #dcdcaa;
+    --orange: #ce9178;
+    --purple: #c586c0;
+    --cyan: #4ec9b0;
+    --red: #f44747;
+    --active: #094771;
+}
+
+body {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.vscode-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Bar */
+.title-bar {
+    height: 35px;
+    background-color: var(--bg-darker);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control.close { background-color: #ff5f57; }
+.control.minimize { background-color: #febc2e; }
+.control.maximize { background-color: #28c840; }
+
+.title-icon {
+    font-size: 16px;
+}
+
+.title-text {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.menu-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-item {
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: var(--bg-lighter);
+}
+
+/* Main Layout */
+.vscode-container {
+    display: grid;
+    grid-template-rows: 35px 1fr 22px;
+    grid-template-columns: 48px 250px 1fr;
+    grid-template-areas:
+        "title title title"
+        "activity sidebar editor"
+        "status status status";
+}
+
+.title-bar { grid-area: title; }
+.activity-bar { grid-area: activity; }
+.sidebar { grid-area: sidebar; }
+.editor-area { grid-area: editor; }
+.status-bar { grid-area: status; }
+
+/* Activity Bar */
+.activity-bar {
+    background-color: var(--bg-darker);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 15px;
+}
+
+.activity-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-dim);
+    position: relative;
+}
+
+.activity-icon:hover {
+    color: var(--text);
+}
+
+.activity-icon.active {
+    color: var(--text);
+}
+
+.activity-icon.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--text);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--bg-dark);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-title {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-content {
+    padding: 10px 0;
+}
+
+.folder-tree {
+    user-select: none;
+}
+
+.folder-header {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.folder-header:hover {
+    background-color: var(--bg-lighter);
+}
+
+.folder-icon {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.folder-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.folder-contents {
+    padding-left: 20px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.file-item:hover {
+    background-color: var(--bg-lighter);
+}
+
+.file-item.active {
+    background-color: var(--active);
+}
+
+.file-icon {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.file-name {
+    font-size: 13px;
+}
+
+/* Editor Area */
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-dark);
+}
+
+/* Tabs */
+.tabs-container {
+    display: flex;
+    background-color: var(--bg-darker);
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: var(--bg-darker);
+    border-right: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--text-dim);
+    min-width: 150px;
+}
+
+.tab:hover {
+    color: var(--text);
+}
+
+.tab.active {
+    background-color: var(--bg-dark);
+    color: var(--text);
+}
+
+.tab-icon {
+    font-size: 14px;
+}
+
+.tab-name {
+    font-size: 13px;
+    flex: 1;
+}
+
+.tab-close {
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tab:hover .tab-close {
+    opacity: 1;
+}
+
+.tab-close:hover {
+    background-color: var(--bg-lighter);
+}
+
+/* Editor Content */
+.editor-content {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+}
+
+.code-file {
+    display: none;
+    padding: 20px 0;
+}
+
+.code-file.active {
+    display: flex;
+}
+
+/* Line Numbers */
+.line-numbers {
+    padding: 0 20px;
+    text-align: right;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+    user-select: none;
+    min-width: 50px;
+}
+
+.code-pre {
+    flex: 1;
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    background: transparent;
+}
+
+.code-pre code {
+    display: block;
+}
+
+.line {
+    display: block;
+}
+
+/* Syntax Highlighting */
+.token-comment { color: var(--green); font-style: italic; }
+.token-keyword { color: var(--purple); }
+.token-variable { color: var(--cyan); }
+.token-function { color: var(--yellow); }
+.token-string { color: var(--orange); }
+.token-property { color: var(--cyan); }
+.token-operator { color: var(--text); }
+.token-type { color: var(--cyan); }
+.token-class { color: var(--cyan); }
+.token-heading { color: var(--blue); font-weight: bold; }
+.token-link { color: var(--blue); text-decoration: underline; }
+.token-template-string { color: var(--orange); }
+
+/* Status Bar */
+.status-bar {
+    height: 22px;
+    background-color: var(--active);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.status-left,
+.status-right {
+    display: flex;
+    gap: 15px;
+}
+
+.status-item {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.status-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar,
+.editor-content::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.editor-content::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.editor-content::-webkit-scrollbar-thumb {
+    background: var(--bg-input);
+    border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.editor-content::-webkit-scrollbar-thumb:hover {
+    background: #4e4e4e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vscode-container {
+        grid-template-columns: 48px 1fr;
+        grid-template-areas:
+            "title title"
+            "sidebar editor"
+            "status status";
+    }
+
+    .sidebar {
+        position: absolute;
+        left: -250px;
+        width: 250px;
+        height: calc(100vh - 57px);
+        top: 35px;
+        z-index: 100;
+        transition: left 0.3s;
+    }
+
+    .sidebar.open {
+        left: 48px;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .activity-bar {
+        grid-area: activity;
+    }
+}
+
+/* Links */
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--active);
+}
+
+/* Code Selection */
+.code-pre ::selection {
+    background-color: #264f78;
+}

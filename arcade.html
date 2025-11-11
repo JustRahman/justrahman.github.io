@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAHMAN'S ARCADE - INSERT COIN</title>
+    <link rel="stylesheet" href="css/arcade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="arcade-cabinet">
+        <!-- Cabinet Top -->
+        <div class="cabinet-top">
+            <div class="cabinet-logo">
+                <div class="logo-text">RAHMAN'S</div>
+                <div class="logo-arcade">ARCADE</div>
+            </div>
+        </div>
+
+        <!-- Screen Bezel -->
+        <div class="screen-bezel">
+            <div class="screen">
+                <!-- CRT Effect -->
+                <div class="crt-overlay"></div>
+                <div class="scanlines"></div>
+
+                <!-- Insert Coin Screen -->
+                <div class="game-screen active" id="insert-coin-screen">
+                    <div class="coin-prompt blink">INSERT COIN</div>
+                    <div class="credit-display">CREDITS: <span id="credits">0</span></div>
+                    <div class="press-space">PRESS SPACE TO INSERT COIN</div>
+                    <div class="high-scores-preview">
+                        <div class="score-title">- HIGH SCORES -</div>
+                        <div class="score-line">1ST  PYTHON    95000</div>
+                        <div class="score-line">2ND  JAVASCRIPT 90000</div>
+                        <div class="score-line">3RD  NEXTJS    85000</div>
+                    </div>
+                </div>
+
+                <!-- Main Menu -->
+                <div class="game-screen" id="main-menu-screen">
+                    <div class="menu-title">
+                        <div class="title-line">═══════════════════════</div>
+                        <div class="title-main">PLAYER SELECT</div>
+                        <div class="title-line">═══════════════════════</div>
+                    </div>
+                    <div class="menu-items">
+                        <div class="menu-item active" data-game="about">
+                            <span class="arrow">▶</span> ABOUT PLAYER
+                        </div>
+                        <div class="menu-item" data-game="skills">
+                            <span class="arrow">▶</span> SKILL TREE
+                        </div>
+                        <div class="menu-item" data-game="projects">
+                            <span class="arrow">▶</span> MISSION LOG
+                        </div>
+                        <div class="menu-item" data-game="contact">
+                            <span class="arrow">▶</span> COMM LINK
+                        </div>
+                        <div class="menu-item" data-game="scores">
+                            <span class="arrow">▶</span> HIGH SCORES
+                        </div>
+                    </div>
+                    <div class="menu-controls">
+                        <div>↑↓ MOVE  ←→ UNUSED</div>
+                        <div>SPACE: SELECT</div>
+                    </div>
+                </div>
+
+                <!-- About Player -->
+                <div class="game-screen" id="about-screen">
+                    <div class="screen-header">
+                        <div>PLAYER DATA</div>
+                        <div>LVL: 21</div>
+                    </div>
+                    <div class="pixel-border">
+                        <div class="info-line">NAME: RAHMAN BAZAROV</div>
+                        <div class="info-line">CLASS: CS STUDENT</div>
+                        <div class="info-line">GUILD: ASU</div>
+                        <div class="info-line">LOCATION: TEMPE, AZ</div>
+                    </div>
+                    <div class="pixel-border">
+                        <div class="bio-text">
+                            COMPUTER SCIENCE STUDENT
+                            WITH EXPERIENCE IN FULL-
+                            STACK DEVELOPMENT AND A
+                            GROWING INTEREST IN
+                            MACHINE LEARNING.
+                        </div>
+                        <div class="bio-text">
+                            SPECIALIZED IN PYTHON,
+                            JAVASCRIPT, AND C# WITH
+                            HANDS-ON EXPERIENCE
+                            BUILDING WEB APPS & APIS.
+                        </div>
+                    </div>
+                    <div class="back-prompt">PRESS ESC TO RETURN</div>
+                </div>
+
+                <!-- Skill Tree -->
+                <div class="game-screen" id="skills-screen">
+                    <div class="screen-header">
+                        <div>SKILL TREE</div>
+                        <div>SP: 450</div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="group-header">▼ LANGUAGES</div>
+                        <div class="skill-bar">
+                            <span class="skill-name">PYTHON     </span>
+                            <span class="skill-boxes">■■■■■■■■■□</span>
+                            <span class="skill-pct">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">JAVASCRIPT </span>
+                            <span class="skill-boxes">■■■■■■■■■□</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">C#         </span>
+                            <span class="skill-boxes">■■■■■■■■□□</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">SQL        </span>
+                            <span class="skill-boxes">■■■■■■■■□□</span>
+                            <span class="skill-pct">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="group-header">▼ FRAMEWORKS</div>
+                        <div class="skill-item">• NEXT.JS    [MASTERED]</div>
+                        <div class="skill-item">• FASTAPI    [MASTERED]</div>
+                        <div class="skill-item">• FLASK      [MASTERED]</div>
+                        <div class="skill-item">• REACT      [MASTERED]</div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="group-header">▼ TOOLS</div>
+                        <div class="skill-item">• GIT • DOCKER • POSTGRESQL</div>
+                        <div class="skill-item">• AWS • STRIPE • RAILWAY</div>
+                    </div>
+                    <div class="back-prompt">PRESS ESC TO RETURN</div>
+                </div>
+
+                <!-- Mission Log (Projects) -->
+                <div class="game-screen" id="projects-screen">
+                    <div class="screen-header">
+                        <div>MISSION LOG</div>
+                        <div>4/4</div>
+                    </div>
+                    <div class="mission-list">
+                        <div class="mission-box">
+                            <div class="mission-header">
+                                <span>╔═══ MISSION 01 ═══╗</span>
+                            </div>
+                            <div class="mission-content">
+                                <div>NAME: LEXFLOW</div>
+                                <div>STATUS: ★ ACTIVE ★</div>
+                                <div class="mission-desc">
+                                    MICRO-SAAS PLATFORM FOR
+                                    ATTORNEYS. CLIENT INTAKE
+                                    & E-SIGNING SYSTEM.
+                                </div>
+                                <div class="mission-tech">
+                                    NEXT.JS•FASTAPI•POSTGRES
+                                </div>
+                                <div class="mission-link">
+                                    → GITHUB.COM/JUSTRAHMAN/LEXFLOW
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mission-box">
+                            <div class="mission-header">
+                                <span>╔═══ MISSION 02 ═══╗</span>
+                            </div>
+                            <div class="mission-content">
+                                <div>NAME: ORDEREASY</div>
+                                <div>STATUS: ★ ACTIVE ★</div>
+                                <div class="mission-desc">
+                                    ELDERLY & DISABLED SUPPORT
+                                    PLATFORM FOR ONLINE
+                                    SHOPPING ESSENTIALS.
+                                </div>
+                                <div class="mission-link">
+                                    → GITHUB.COM/JUSTRAHMAN/ORDEREASE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mission-box">
+                            <div class="mission-header">
+                                <span>╔═══ MISSION 03 ═══╗</span>
+                            </div>
+                            <div class="mission-content">
+                                <div>NAME: BELETFILM</div>
+                                <div>STATUS: ✓ COMPLETE</div>
+                                <div class="mission-desc">
+                                    C# WPF STREAMING PLATFORM
+                                    FOR NATIONAL MOVIES & TV.
+                                </div>
+                                <div class="mission-link">
+                                    → GITHUB.COM/JUSTRAHMAN/BELETFILM
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mission-box">
+                            <div class="mission-header">
+                                <span>╔═══ MISSION 04 ═══╗</span>
+                            </div>
+                            <div class="mission-content">
+                                <div>NAME: FMS GAME</div>
+                                <div>STATUS: ✓ COMPLETE</div>
+                                <div class="mission-desc">
+                                    INTERACTIVE GAME FOR
+                                    TODDLERS TO DEVELOP
+                                    FINE MOTOR SKILLS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back-prompt">PRESS ESC TO RETURN</div>
+                </div>
+
+                <!-- Comm Link (Contact) -->
+                <div class="game-screen" id="contact-screen">
+                    <div class="screen-header">
+                        <div>COMM LINK</div>
+                        <div>ONLINE</div>
+                    </div>
+                    <div class="pixel-border">
+                        <div class="comm-title">═ ESTABLISH CONNECTION ═</div>
+                        <div class="comm-item">
+                            <span class="comm-icon">📧</span>
+                            <span>EMAIL:</span>
+                        </div>
+                        <div class="comm-value">
+                            RAHMANBAZAROV4567@GMAIL.COM
+                        </div>
+                        <div class="comm-item">
+                            <span class="comm-icon">📱</span>
+                            <span>PHONE:</span>
+                        </div>
+                        <div class="comm-value">
+                            +1 (480) 465-7171
+                        </div>
+                        <div class="comm-item">
+                            <span class="comm-icon">💻</span>
+                            <span>GITHUB:</span>
+                        </div>
+                        <div class="comm-value">
+                            @JUSTRAHMAN
+                        </div>
+                        <div class="comm-item">
+                            <span class="comm-icon">📸</span>
+                            <span>INSTAGRAM:</span>
+                        </div>
+                        <div class="comm-value">
+                            @BAZAROV_RAHMAN
+                        </div>
+                    </div>
+                    <div class="pixel-border">
+                        <div class="status-msg blink">
+                            ▶ CONNECTION AVAILABLE ◀
+                        </div>
+                        <div class="status-msg">
+                            ACCEPTING NEW QUESTS
+                        </div>
+                    </div>
+                    <div class="back-prompt">PRESS ESC TO RETURN</div>
+                </div>
+
+                <!-- High Scores -->
+                <div class="game-screen" id="scores-screen">
+                    <div class="screen-header">
+                        <div>═══ HIGH SCORES ═══</div>
+                    </div>
+                    <div class="scores-table">
+                        <div class="score-header">RANK  SKILL      POINTS</div>
+                        <div class="score-entry gold">
+                            <span>1ST</span>
+                            <span>PYTHON    </span>
+                            <span>95000</span>
+                        </div>
+                        <div class="score-entry silver">
+                            <span>2ND</span>
+                            <span>JAVASCRIPT</span>
+                            <span>90000</span>
+                        </div>
+                        <div class="score-entry bronze">
+                            <span>3RD</span>
+                            <span>C#        </span>
+                            <span>85000</span>
+                        </div>
+                        <div class="score-entry">
+                            <span>4TH</span>
+                            <span>SQL       </span>
+                            <span>80000</span>
+                        </div>
+                        <div class="score-entry">
+                            <span>5TH</span>
+                            <span>NEXT.JS   </span>
+                            <span>75000</span>
+                        </div>
+                        <div class="score-entry">
+                            <span>6TH</span>
+                            <span>FASTAPI   </span>
+                            <span>70000</span>
+                        </div>
+                        <div class="score-entry">
+                            <span>7TH</span>
+                            <span>FLASK     </span>
+                            <span>65000</span>
+                        </div>
+                        <div class="score-entry">
+                            <span>8TH</span>
+                            <span>DOCKER    </span>
+                            <span>60000</span>
+                        </div>
+                    </div>
+                    <div class="achievement-text">
+                        ★ TOTAL SKILL POINTS: 620000 ★
+                    </div>
+                    <div class="back-prompt">PRESS ESC TO RETURN</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="controls-left">
+                <div class="joystick">
+                    <div class="joystick-base"></div>
+                    <div class="joystick-stick"></div>
+                </div>
+            </div>
+            <div class="controls-center">
+                <div class="arcade-buttons">
+                    <div class="arcade-button red">1P</div>
+                    <div class="arcade-button blue">2P</div>
+                </div>
+                <div class="coin-slot">
+                    <div class="coin-label">INSERT COIN</div>
+                    <div class="slot"></div>
+                </div>
+            </div>
+            <div class="controls-right">
+                <div class="action-buttons">
+                    <div class="action-button yellow">A</div>
+                    <div class="action-button green">B</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <div class="info-item">
+                <div class="info-label">1UP</div>
+                <div class="info-value" id="player-score">000000</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">HIGH</div>
+                <div class="info-value">620000</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">CREDITS</div>
+                <div class="info-value" id="credits-display">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio indicators -->
+    <div id="sound-fx" style="display: none;">
+        <div class="sound-name"></div>
+    </div>
+
+    <script src="js/arcade.js"></script>
+</body>
+</html>

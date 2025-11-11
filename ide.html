@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - rahman-portfolio</title>
+    <link rel="stylesheet" href="css/ide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="vscode-container">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-left">
+                <div class="window-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <div class="title-icon">📁</div>
+                <div class="title-text">rahman-portfolio - Visual Studio Code</div>
+            </div>
+            <div class="title-center">
+                <div class="menu-bar">
+                    <span class="menu-item">File</span>
+                    <span class="menu-item">Edit</span>
+                    <span class="menu-item">Selection</span>
+                    <span class="menu-item">View</span>
+                    <span class="menu-item">Go</span>
+                    <span class="menu-item">Run</span>
+                    <span class="menu-item">Terminal</span>
+                    <span class="menu-item">Help</span>
+                </div>
+            </div>
+            <div class="title-right"></div>
+        </div>
+
+        <!-- Activity Bar -->
+        <div class="activity-bar">
+            <div class="activity-icon active" data-view="explorer" title="Explorer">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+            </div>
+            <div class="activity-icon" data-view="search" title="Search">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+            <div class="activity-icon" data-view="git" title="Source Control">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.007 8.222A3.738 3.738 0 0015.045 5.2a3.737 3.737 0 00-1.156 6.583 2.988 2.988 0 01-2.668 1.67h-2.99a4.456 4.456 0 00-2.989 1.165V7.4a3.737 3.737 0 10-1.494 0v9.117a3.776 3.776 0 101.816.099 2.99 2.99 0 012.668-1.667h2.99a4.484 4.484 0 004.223-3.039 3.736 3.736 0 003.565-3.687z"/></svg>
+            </div>
+            <div class="activity-icon" data-view="extensions" title="Extensions">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 1.5L15 0l7.5 7.5L21 9l-1.5-1.5-7.5 7.5-1.5-1.5L18 6l-4.5-4.5zM13 10l-3-3-3 3-3-3L1.5 9.5 3 11l3-3 3 3 3-3L15 11l-2 2 3 3-3 3-3-3-3 3-3-3-3 3L0 15l3-3-3-3L1.5 7.5 4 10l3-3z"/></svg>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-title">EXPLORER</span>
+            </div>
+            <div class="sidebar-content">
+                <div class="folder-tree">
+                    <div class="folder expanded">
+                        <div class="folder-header">
+                            <span class="folder-icon">▼</span>
+                            <span class="folder-name">RAHMAN-PORTFOLIO</span>
+                        </div>
+                        <div class="folder-contents">
+                            <div class="file-item active" data-file="readme">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">README.md</span>
+                            </div>
+                            <div class="file-item" data-file="about">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">about.js</span>
+                            </div>
+                            <div class="file-item" data-file="skills">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">skills.json</span>
+                            </div>
+                            <div class="file-item" data-file="projects">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">projects.md</span>
+                            </div>
+                            <div class="file-item" data-file="contact">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">contact.ts</span>
+                            </div>
+                            <div class="file-item" data-file="experience">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">experience.yaml</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editor Area -->
+        <div class="editor-area">
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tab active" data-file="readme">
+                    <span class="tab-icon">📄</span>
+                    <span class="tab-name">README.md</span>
+                    <span class="tab-close">×</span>
+                </div>
+            </div>
+
+            <!-- Editor Content -->
+            <div class="editor-content">
+                <!-- README.md -->
+                <div class="code-file active" id="readme-file">
+                    <div class="line-numbers" id="readme-lines"></div>
+                    <pre class="code-pre"><code class="language-markdown"><span class="line"><span class="token-comment"># Rahman Bazarov - Portfolio</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">## 👋 Welcome!</span></span>
+<span class="line"></span>
+<span class="line">Computer Science student at **Arizona State University**</span>
+<span class="line">with a passion for full-stack development and machine learning.</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">## 🚀 Quick Navigation</span></span>
+<span class="line"></span>
+<span class="line">- <span class="token-link">[about.js]()</span> - Learn more about me</span>
+<span class="line">- <span class="token-link">[skills.json]()</span> - Technical skills & expertise</span>
+<span class="line">- <span class="token-link">[projects.md]()</span> - Featured projects</span>
+<span class="line">- <span class="token-link">[contact.ts]()</span> - Get in touch</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">## 💼 Current Focus</span></span>
+<span class="line"></span>
+<span class="line">```javascript</span>
+<span class="line">const currentFocus = {</span>
+<span class="line">  learning: ['Machine Learning', 'Cloud Architecture'],</span>
+<span class="line">  building: ['LexFlow', 'Web Applications'],</span>
+<span class="line">  exploring: ['SaaS Development', 'API Design']</span>
+<span class="line">};</span>
+<span class="line">```</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">## 📫 Connect</span></span>
+<span class="line"></span>
+<span class="line">Feel free to explore the codebase and reach out!</span></code></pre>
+                </div>
+
+                <!-- about.js -->
+                <div class="code-file" id="about-file">
+                    <div class="line-numbers" id="about-lines"></div>
+                    <pre class="code-pre"><code class="language-javascript"><span class="line"><span class="token-comment">// about.js - Personal Information</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-keyword">const</span> <span class="token-variable">developer</span> <span class="token-operator">=</span> {</span>
+<span class="line">  <span class="token-property">name</span>: <span class="token-string">"Rahman Bazarov"</span>,</span>
+<span class="line">  <span class="token-property">title</span>: <span class="token-string">"Computer Science Student & Developer"</span>,</span>
+<span class="line">  <span class="token-property">university</span>: <span class="token-string">"Arizona State University"</span>,</span>
+<span class="line">  <span class="token-property">location</span>: <span class="token-string">"Tempe, Arizona"</span>,</span>
+<span class="line">  </span>
+<span class="line">  <span class="token-property">bio</span>: [</span>
+<span class="line">    <span class="token-string">"Computer Science student with experience in"</span>,</span>
+<span class="line">    <span class="token-string">"full-stack development and a growing interest"</span>,</span>
+<span class="line">    <span class="token-string">"in machine learning."</span>,</span>
+<span class="line">    <span class="token-string">""</span>,</span>
+<span class="line">    <span class="token-string">"I specialize in Python, JavaScript, and C#,"</span>,</span>
+<span class="line">    <span class="token-string">"with hands-on experience building web"</span>,</span>
+<span class="line">    <span class="token-string">"applications and APIs."</span></span>
+<span class="line">  ],</span>
+<span class="line"></span>
+<span class="line">  <span class="token-property">interests</span>: [</span>
+<span class="line">    <span class="token-string">"Full-Stack Development"</span>,</span>
+<span class="line">    <span class="token-string">"Machine Learning"</span>,</span>
+<span class="line">    <span class="token-string">"SaaS Platforms"</span>,</span>
+<span class="line">    <span class="token-string">"API Design"</span></span>
+<span class="line">  ],</span>
+<span class="line"></span>
+<span class="line">  <span class="token-function">getInfo</span>() {</span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-template-string">`${<span class="token-variable">this</span>.name} - ${<span class="token-variable">this</span>.title}`</span>;</span>
+<span class="line">  }</span>
+<span class="line">};</span>
+<span class="line"></span>
+<span class="line"><span class="token-keyword">export</span> <span class="token-keyword">default</span> developer;</span></code></pre>
+                </div>
+
+                <!-- skills.json -->
+                <div class="code-file" id="skills-file">
+                    <div class="line-numbers" id="skills-lines"></div>
+                    <pre class="code-pre"><code class="language-json"><span class="line">{</span>
+<span class="line">  <span class="token-property">"languages"</span>: {</span>
+<span class="line">    <span class="token-property">"primary"</span>: [<span class="token-string">"Python"</span>, <span class="token-string">"JavaScript"</span>, <span class="token-string">"C#"</span>],</span>
+<span class="line">    <span class="token-property">"familiar"</span>: [<span class="token-string">"SQL"</span>, <span class="token-string">"TypeScript"</span>, <span class="token-string">"HTML/CSS"</span>]</span>
+<span class="line">  },</span>
+<span class="line">  <span class="token-property">"frameworks"</span>: {</span>
+<span class="line">    <span class="token-property">"frontend"</span>: [<span class="token-string">"Next.js"</span>, <span class="token-string">"React"</span>],</span>
+<span class="line">    <span class="token-property">"backend"</span>: [<span class="token-string">"FastAPI"</span>, <span class="token-string">"Flask"</span>],</span>
+<span class="line">    <span class="token-property">"desktop"</span>: [<span class="token-string">"WPF"</span>]</span>
+<span class="line">  },</span>
+<span class="line">  <span class="token-property">"tools"</span>: {</span>
+<span class="line">    <span class="token-property">"versionControl"</span>: [<span class="token-string">"Git"</span>, <span class="token-string">"GitHub"</span>],</span>
+<span class="line">    <span class="token-property">"devOps"</span>: [<span class="token-string">"Docker"</span>, <span class="token-string">"Railway"</span>],</span>
+<span class="line">    <span class="token-property">"databases"</span>: [<span class="token-string">"PostgreSQL"</span>, <span class="token-string">"SQLite"</span>],</span>
+<span class="line">    <span class="token-property">"cloud"</span>: [<span class="token-string">"AWS"</span>]</span>
+<span class="line">  },</span>
+<span class="line">  <span class="token-property">"specializations"</span>: [</span>
+<span class="line">    <span class="token-string">"Full-Stack Web Development"</span>,</span>
+<span class="line">    <span class="token-string">"RESTful API Design"</span>,</span>
+<span class="line">    <span class="token-string">"Machine Learning"</span>,</span>
+<span class="line">    <span class="token-string">"SaaS Development"</span></span>
+<span class="line">  ],</span>
+<span class="line">  <span class="token-property">"learning"</span>: [</span>
+<span class="line">    <span class="token-string">"TensorFlow"</span>,</span>
+<span class="line">    <span class="token-string">"Scikit-learn"</span>,</span>
+<span class="line">    <span class="token-string">"Cloud Architecture"</span></span>
+<span class="line">  ]</span>
+<span class="line">}</span></code></pre>
+                </div>
+
+                <!-- projects.md -->
+                <div class="code-file" id="projects-file">
+                    <div class="line-numbers" id="projects-lines"></div>
+                    <pre class="code-pre"><code class="language-markdown"><span class="line"><span class="token-comment"># Projects Portfolio</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">## 🚀 Featured Projects</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">### LexFlow</span></span>
+<span class="line">**Status:** Active Development</span>
+<span class="line"></span>
+<span class="line">Micro-SaaS platform streamlining client intake and e-signing</span>
+<span class="line">for solo attorneys and small law firms.</span>
+<span class="line"></span>
+<span class="line">**Tech Stack:**</span>
+<span class="line">- Frontend: Next.js, React, TypeScript</span>
+<span class="line">- Backend: FastAPI, Python</span>
+<span class="line">- Database: PostgreSQL</span>
+<span class="line">- Payment: Stripe Integration</span>
+<span class="line">- DevOps: Docker, Railway</span>
+<span class="line"></span>
+<span class="line"><span class="token-link">[View on GitHub →](https://github.com/JustRahman/LexFlow)</span></span>
+<span class="line"></span>
+<span class="line">---</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">### OrderEasy</span></span>
+<span class="line">**Status:** Active</span>
+<span class="line"></span>
+<span class="line">Platform supporting elderly and disabled individuals with</span>
+<span class="line">online shopping for essentials.</span>
+<span class="line"></span>
+<span class="line">**Tech Stack:** Full-Stack Development</span>
+<span class="line"></span>
+<span class="line"><span class="token-link">[View on GitHub →](https://github.com/JustRahman/OrderEase)</span></span>
+<span class="line"></span>
+<span class="line">---</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">### BeletFilm</span></span>
+<span class="line">**Status:** Complete</span>
+<span class="line"></span>
+<span class="line">C# (WPF) streaming platform for national movies and TV shows.</span>
+<span class="line"></span>
+<span class="line">**Tech Stack:** C#, WPF, XAML</span>
+<span class="line"></span>
+<span class="line"><span class="token-link">[View on GitHub →](https://github.com/JustRahman/BeletFilm)</span></span>
+<span class="line"></span>
+<span class="line">---</span>
+<span class="line"></span>
+<span class="line"><span class="token-heading">### FMS Improvement Game</span></span>
+<span class="line">**Status:** Complete</span>
+<span class="line"></span>
+<span class="line">Interactive game helping toddlers develop fine motor skills</span>
+<span class="line">through fun, engaging activities.</span>
+<span class="line"></span>
+<span class="line">**Tech Stack:** Game Development</span></code></pre>
+                </div>
+
+                <!-- contact.ts -->
+                <div class="code-file" id="contact-file">
+                    <div class="line-numbers" id="contact-lines"></div>
+                    <pre class="code-pre"><code class="language-typescript"><span class="line"><span class="token-comment">// contact.ts - Contact Information</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-keyword">interface</span> <span class="token-class">ContactInfo</span> {</span>
+<span class="line">  email: <span class="token-type">string</span>;</span>
+<span class="line">  phone: <span class="token-type">string</span>;</span>
+<span class="line">  github: <span class="token-type">string</span>;</span>
+<span class="line">  instagram: <span class="token-type">string</span>;</span>
+<span class="line">  location: <span class="token-type">string</span>;</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="token-keyword">const</span> <span class="token-variable">contact</span>: <span class="token-class">ContactInfo</span> <span class="token-operator">=</span> {</span>
+<span class="line">  <span class="token-property">email</span>: <span class="token-string">"rahmanbazarov4567@gmail.com"</span>,</span>
+<span class="line">  <span class="token-property">phone</span>: <span class="token-string">"+1 (480) 465-7171"</span>,</span>
+<span class="line">  <span class="token-property">github</span>: <span class="token-string">"https://github.com/JustRahman"</span>,</span>
+<span class="line">  <span class="token-property">instagram</span>: <span class="token-string">"https://www.instagram.com/bazarov_rahman"</span>,</span>
+<span class="line">  <span class="token-property">location</span>: <span class="token-string">"Tempe, Arizona"</span></span>
+<span class="line">};</span>
+<span class="line"></span>
+<span class="line"><span class="token-comment">/**</span></span>
+<span class="line"><span class="token-comment"> * Send a message</span></span>
+<span class="line"><span class="token-comment"> * @param message - Your message</span></span>
+<span class="line"><span class="token-comment"> * @returns Promise with response</span></span>
+<span class="line"><span class="token-comment"> */</span></span>
+<span class="line"><span class="token-keyword">async function</span> <span class="token-function">sendMessage</span>(</span>
+<span class="line">  <span class="token-variable">message</span>: <span class="token-type">string</span></span>
+<span class="line">): <span class="token-class">Promise</span><<span class="token-type">void</span>> {</span>
+<span class="line">  <span class="token-comment">// Email me at: rahmanbazarov4567@gmail.com</span></span>
+<span class="line">  <span class="token-keyword">console</span>.<span class="token-function">log</span>(<span class="token-string">"Message sent!"</span>);</span>
+<span class="line">}</span>
+<span class="line"></span>
+<span class="line"><span class="token-keyword">export</span> { contact, sendMessage };</span></code></pre>
+                </div>
+
+                <!-- experience.yaml -->
+                <div class="code-file" id="experience-file">
+                    <div class="line-numbers" id="experience-lines"></div>
+                    <pre class="code-pre"><code class="language-yaml"><span class="line"><span class="token-comment"># experience.yaml - Work Experience</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-property">education</span>:</span>
+<span class="line">  - <span class="token-property">institution</span>: <span class="token-string">"Arizona State University"</span></span>
+<span class="line">    <span class="token-property">degree</span>: <span class="token-string">"Bachelor of Science"</span></span>
+<span class="line">    <span class="token-property">major</span>: <span class="token-string">"Computer Science"</span></span>
+<span class="line">    <span class="token-property">period</span>: <span class="token-string">"2024 - Present"</span></span>
+<span class="line">    <span class="token-property">status</span>: <span class="token-string">"Current Student"</span></span>
+<span class="line"></span>
+<span class="line"><span class="token-property">availability</span>:</span>
+<span class="line">  <span class="token-property">status</span>: <span class="token-string">"Open to opportunities"</span></span>
+<span class="line">  <span class="token-property">interests</span>:</span>
+<span class="line">    - <span class="token-string">"Software Engineering Internships"</span></span>
+<span class="line">    - <span class="token-string">"Full-Stack Development Roles"</span></span>
+<span class="line">    - <span class="token-string">"Machine Learning Projects"</span></span>
+<span class="line">    - <span class="token-string">"Open Source Contribution"</span></span></code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-item">🔌 Git: main</span>
+                <span class="status-item">✓ No Issues</span>
+            </div>
+            <div class="status-right">
+                <span class="status-item">UTF-8</span>
+                <span class="status-item">Markdown</span>
+                <span class="status-item">Ln 1, Col 1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ide.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSION CONTROL - RAHMAN BAZAROV</title>
+    <link rel="stylesheet" href="css/nasa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mission-control">
+        <!-- Main Header -->
+        <header class="control-header">
+            <div class="header-left">
+                <div class="nasa-logo">
+                    <div class="logo-circle">🚀</div>
+                    <div class="logo-text">
+                        <div class="logo-main">MISSION CONTROL</div>
+                        <div class="logo-sub">PORTFOLIO OPERATIONS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="mission-title">OPERATION: RAHMAN BAZAROV</div>
+                <div class="mission-status">STATUS: NOMINAL</div>
+            </div>
+            <div class="header-right">
+                <div class="mission-time">
+                    <div class="time-label">MET</div>
+                    <div class="time-display" id="mission-time">00:00:00</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Control Grid -->
+        <div class="control-grid">
+            <!-- Left Panel - Systems Status -->
+            <div class="panel systems-panel">
+                <div class="panel-header">
+                    <span class="panel-title">⚙ SYSTEMS STATUS</span>
+                    <span class="panel-indicator active">●</span>
+                </div>
+                <div class="panel-content">
+                    <div class="system-group">
+                        <div class="group-title">CORE LANGUAGES</div>
+                        <div class="system-item">
+                            <span class="system-name">Python</span>
+                            <div class="system-bar">
+                                <div class="bar-fill" style="width: 95%"></div>
+                            </div>
+                            <span class="system-value">95%</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">JavaScript</span>
+                            <div class="system-bar">
+                                <div class="bar-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="system-value">90%</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">C#</span>
+                            <div class="system-bar">
+                                <div class="bar-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="system-value">85%</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">SQL</span>
+                            <div class="system-bar">
+                                <div class="bar-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="system-value">80%</span>
+                        </div>
+                    </div>
+
+                    <div class="system-group">
+                        <div class="group-title">FRAMEWORKS</div>
+                        <div class="system-item">
+                            <span class="system-name">Next.js</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">FastAPI</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">Flask</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">React</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                    </div>
+
+                    <div class="system-group">
+                        <div class="group-title">TOOLS & PLATFORMS</div>
+                        <div class="system-item">
+                            <span class="system-name">Git</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">Docker</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">PostgreSQL</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                        <div class="system-item">
+                            <span class="system-name">AWS</span>
+                            <span class="status-indicator go">GO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel - Mission Overview -->
+            <div class="center-panels">
+                <!-- Top - Astronaut Profile -->
+                <div class="panel profile-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">👨‍🚀 ASTRONAUT PROFILE</span>
+                        <span class="panel-indicator active">●</span>
+                    </div>
+                    <div class="panel-content profile-content">
+                        <div class="profile-data">
+                            <div class="data-row">
+                                <span class="data-label">NAME:</span>
+                                <span class="data-value">RAHMAN BAZAROV</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">RANK:</span>
+                                <span class="data-value">COMPUTER SCIENCE STUDENT</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">STATION:</span>
+                                <span class="data-value">ARIZONA STATE UNIVERSITY</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">MISSION:</span>
+                                <span class="data-value">FULL-STACK DEVELOPMENT</span>
+                            </div>
+                            <div class="data-row">
+                                <span class="data-label">SPECIALIZATION:</span>
+                                <span class="data-value">MACHINE LEARNING / WEB DEV</span>
+                            </div>
+                        </div>
+                        <div class="profile-bio">
+                            <p>Computer Science student with experience in full-stack development and growing interest in machine learning. Specialized in Python, JavaScript, and C# with hands-on experience building web applications and APIs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom - Active Missions -->
+                <div class="panel missions-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">🚀 ACTIVE MISSIONS</span>
+                        <span class="panel-indicator active">●</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="mission-card">
+                            <div class="mission-badge">
+                                <div class="badge-number">01</div>
+                                <div class="badge-status">ACTIVE</div>
+                            </div>
+                            <div class="mission-info">
+                                <h3>MISSION: LEXFLOW</h3>
+                                <p>Micro-SaaS platform streamlining client intake and e-signing for attorneys</p>
+                                <div class="mission-tech">Next.js • FastAPI • PostgreSQL • Stripe • Docker</div>
+                                <a href="https://github.com/JustRahman/LexFlow" target="_blank" class="mission-link">VIEW TELEMETRY →</a>
+                            </div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div class="mission-badge">
+                                <div class="badge-number">02</div>
+                                <div class="badge-status">ACTIVE</div>
+                            </div>
+                            <div class="mission-info">
+                                <h3>MISSION: ORDEREASY</h3>
+                                <p>Support platform for elderly and disabled individuals for online shopping</p>
+                                <div class="mission-tech">Full-Stack Development</div>
+                                <a href="https://github.com/JustRahman/OrderEase" target="_blank" class="mission-link">VIEW TELEMETRY →</a>
+                            </div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div class="mission-badge">
+                                <div class="badge-number">03</div>
+                                <div class="badge-status">COMPLETE</div>
+                            </div>
+                            <div class="mission-info">
+                                <h3>MISSION: BELETFILM</h3>
+                                <p>C# (WPF) streaming platform for national movies and TV shows</p>
+                                <div class="mission-tech">C# • WPF • XAML</div>
+                                <a href="https://github.com/JustRahman/BeletFilm" target="_blank" class="mission-link">VIEW TELEMETRY →</a>
+                            </div>
+                        </div>
+
+                        <div class="mission-card">
+                            <div class="mission-badge">
+                                <div class="badge-number">04</div>
+                                <div class="badge-status">COMPLETE</div>
+                            </div>
+                            <div class="mission-info">
+                                <h3>MISSION: FMS GAME</h3>
+                                <p>Interactive game for toddlers to develop fine motor skills</p>
+                                <div class="mission-tech">Game Development</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Telemetry & Communications -->
+            <div class="right-panels">
+                <!-- Radar Display -->
+                <div class="panel radar-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">📡 TRACKING</span>
+                        <span class="panel-indicator active">●</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="radar-display">
+                            <div class="radar-sweep"></div>
+                            <div class="radar-grid"></div>
+                            <div class="radar-blip" style="top: 30%; left: 40%;"></div>
+                            <div class="radar-blip" style="top: 60%; left: 70%;"></div>
+                            <div class="radar-blip" style="top: 50%; left: 20%;"></div>
+                        </div>
+                        <div class="radar-data">
+                            <div class="data-line">SIGNAL: STRONG</div>
+                            <div class="data-line">TARGETS: 3 ACQUIRED</div>
+                            <div class="data-line">RANGE: OPTIMAL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communications Log -->
+                <div class="panel comms-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">📞 COMMUNICATIONS</span>
+                        <span class="panel-indicator active">●</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="comms-log" id="comms-log">
+                            <div class="log-entry">
+                                <span class="log-time">00:00:01</span>
+                                <span class="log-text">HOUSTON: Portfolio systems online</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="log-time">00:00:02</span>
+                                <span class="log-text">CAPCOM: All systems nominal</span>
+                            </div>
+                            <div class="log-entry">
+                                <span class="log-time">00:00:03</span>
+                                <span class="log-text">FLIGHT: GO for visitor contact</span>
+                            </div>
+                        </div>
+                        <div class="contact-channels">
+                            <div class="channel-title">CONTACT CHANNELS</div>
+                            <div class="channel-item">
+                                <span class="channel-icon">📧</span>
+                                <a href="mailto:rahmanbazarov4567@gmail.com">rahmanbazarov4567@gmail.com</a>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-icon">📱</span>
+                                <a href="tel:+14804657171">+1 (480) 465-7171</a>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-icon">💻</span>
+                                <a href="https://github.com/JustRahman" target="_blank">@JustRahman</a>
+                            </div>
+                            <div class="channel-item">
+                                <span class="channel-icon">📸</span>
+                                <a href="https://www.instagram.com/bazarov_rahman" target="_blank">@bazarov_rahman</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vital Signs -->
+                <div class="panel vitals-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">💚 VITALS</span>
+                        <span class="panel-indicator active">●</span>
+                    </div>
+                    <div class="panel-content">
+                        <div class="vital-monitor">
+                            <div class="vital-item">
+                                <span class="vital-label">MOTIVATION</span>
+                                <div class="vital-graph">
+                                    <canvas id="motivation-graph" width="200" height="60"></canvas>
+                                </div>
+                                <span class="vital-value">98%</span>
+                            </div>
+                            <div class="vital-item">
+                                <span class="vital-label">CREATIVITY</span>
+                                <div class="vital-graph">
+                                    <canvas id="creativity-graph" width="200" height="60"></canvas>
+                                </div>
+                                <span class="vital-value">95%</span>
+                            </div>
+                            <div class="vital-item">
+                                <span class="vital-label">SKILLS</span>
+                                <div class="vital-graph">
+                                    <canvas id="skills-graph" width="200" height="60"></canvas>
+                                </div>
+                                <span class="vital-value">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="status-bar">
+            <div class="status-section">
+                <span class="status-label">LOCATION:</span>
+                <span class="status-value">TEMPE, ARIZONA</span>
+            </div>
+            <div class="status-section">
+                <span class="status-label">GROUND STATION:</span>
+                <span class="status-value">ASU MISSION CONTROL</span>
+            </div>
+            <div class="status-section">
+                <span class="status-label">AVAILABILITY:</span>
+                <span class="status-value blink">OPEN TO OPPORTUNITIES</span>
+            </div>
+            <div class="status-section">
+                <span class="status-label">UTC:</span>
+                <span class="status-value" id="utc-time">00:00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nasa.js"></script>
+</body>
+</html>
