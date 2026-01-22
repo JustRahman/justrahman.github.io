@@ -249,8 +249,8 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background-color: var(--white);
+    gap: 0;
+    background-color: var(--black);
     border: 2px solid var(--white);
 }
 
@@ -262,6 +262,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid var(--white);
 }
 
 .project-card:hover {
