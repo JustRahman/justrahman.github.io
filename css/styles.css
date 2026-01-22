@@ -319,6 +319,11 @@ body {
     color: var(--black);
 }
 
+/* Handle odd number of project cards - fill empty space */
+.project-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+}
+
 /* Contact Section */
 .contact {
     padding: 8rem 0;
